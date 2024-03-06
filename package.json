@@ -62,7 +62,7 @@
         "react-material-design-provider": "^1.0.0",
         "react-native": "^0.73.5",
         "react-native-builder-bob": "^0.23.2",
-        "react-native-vector-icons": "^10.0.3",
+        "react-native-vector-icons": "https://github.com/viniciusyoshioka/react-native-vector-icons.git",
         "typescript": "^5.3.3"
     },
     "react-native-builder-bob": {
