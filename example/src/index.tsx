@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useColorScheme } from "react-native"
 import { GestureHandlerRootView } from "react-native-gesture-handler"
 
+import { Router } from "./router"
 import { Settings, SettingsProvider } from "./services/settings"
 import { ThemeProvider } from "./theme"
 
@@ -19,7 +20,7 @@ export function App() {
         <GestureHandlerRootView style={{ flex: 1 }}>
             <SettingsProvider settings={settings} setSettings={setSettings}>
                 <ThemeProvider>
-
+                    <Router />
                 </ThemeProvider>
             </SettingsProvider>
         </GestureHandlerRootView>
