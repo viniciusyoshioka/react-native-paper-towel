@@ -1697,6 +1697,11 @@
   dependencies:
     nanoid "^3.1.23"
 
+"@sayem314/react-native-keep-awake@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@sayem314/react-native-keep-awake/-/react-native-keep-awake-1.2.3.tgz#e212bbd8be95296c37a75cde02c081f0e2602e46"
+  integrity sha512-Vk/1cYfEiZpKUKDH1c4NzRwSROcIRGjH/QY0/AnDoYTY01LJiqn9h7xKmLl7VtZlvgTkhcWwISpFSPYDU5TfwA==
+
 "@sideway/address@^4.1.5":
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/@sideway/address/-/address-4.1.5.tgz#4bc149a0076623ced99ca8208ba780d65a99b9d5"
