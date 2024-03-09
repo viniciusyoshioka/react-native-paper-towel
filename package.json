@@ -49,6 +49,7 @@
         "react": "*",
         "react-material-design-provider": "*",
         "react-native": "*",
+        "react-native-paper": "*",
         "react-native-vector-icons": "*"
     },
     "devDependencies": {
@@ -62,6 +63,7 @@
         "react-material-design-provider": "^1.0.0",
         "react-native": "^0.73.5",
         "react-native-builder-bob": "^0.23.2",
+        "react-native-paper": "^5.12.3",
         "react-native-vector-icons": "https://github.com/viniciusyoshioka/react-native-vector-icons.git",
         "typescript": "^5.3.3"
     },
