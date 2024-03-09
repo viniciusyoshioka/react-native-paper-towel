@@ -5,6 +5,7 @@ import { Pressable, StatusBar } from "react-native"
 import { Icon } from "react-native-paper-towel"
 
 import { IconScreen } from "../screens/IconScreen"
+import { LoadingModalScreen } from "../screens/LoadingModalScreen"
 import { PressableScreen } from "../screens/PressableScreen"
 import { useSettings } from "../services/settings"
 
@@ -58,6 +59,7 @@ export function Router() {
 
             <Drawer.Navigator screenOptions={screenOptions}>
                 <Drawer.Screen name={"Icon"} component={IconScreen} />
+                <Drawer.Screen name={"LoadingModal"} component={LoadingModalScreen} />
                 <Drawer.Screen name={"Pressable"} component={PressableScreen} />
             </Drawer.Navigator>
         </NavigationContainer>
