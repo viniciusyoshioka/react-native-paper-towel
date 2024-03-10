@@ -43,8 +43,9 @@ Its props extends `ViewProps`.
 ### EmptyScreen.Icon
 
 The icon that is shown. The difference between `EmptyScreen.Icon` and the
-`Icon` from `react-native-paper-towel` is that this one is pre styled for
-its usage. Its props are the same as `IconProps` from `react-native-paper-towel`.
+[`Icon`](../Icon/README.md) from `react-native-paper-towel` is that this one
+is pre styled for its usage. Its props are the same as
+[`IconProps`](../Icon/README.md) from `react-native-paper-towel`.
 
 ### EmptyScreen.Image
 
