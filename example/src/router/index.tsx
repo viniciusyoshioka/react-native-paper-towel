@@ -6,7 +6,7 @@ import { Icon } from "react-native-paper-towel"
 
 import { EmptyScreenScreen } from "../screens/EmptyScreenScreen"
 import { IconScreen } from "../screens/IconScreen"
-import { InputHeaderScreen } from "../screens/InputHeaderScreen"
+import { InputScreen } from "../screens/InputScreen"
 import { LoadingModalScreen } from "../screens/LoadingModalScreen"
 import { PressableScreen } from "../screens/PressableScreen"
 import { useSettings } from "../services/settings"
@@ -62,7 +62,7 @@ export function Router() {
             <Drawer.Navigator screenOptions={screenOptions}>
                 <Drawer.Screen name={"EmptyScreen"} component={EmptyScreenScreen} />
                 <Drawer.Screen name={"Icon"} component={IconScreen} />
-                <Drawer.Screen name={"InputHeader"} component={InputHeaderScreen} />
+                <Drawer.Screen name={"Inputs"} component={InputScreen} />
                 <Drawer.Screen name={"LoadingModal"} component={LoadingModalScreen} />
                 <Drawer.Screen name={"Pressable"} component={PressableScreen} />
             </Drawer.Navigator>

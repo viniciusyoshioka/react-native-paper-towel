@@ -1,22 +1,23 @@
 import { DrawerToggleButton } from "@react-navigation/drawer"
-import { useFocusEffect, useNavigation } from "@react-navigation/native"
-import { useCallback, useLayoutEffect, useState } from "react"
+import { useNavigation } from "@react-navigation/native"
+import { useLayoutEffect, useState } from "react"
 import { useMaterialTheme } from "react-material-design-provider"
 import { View } from "react-native"
 import { Appbar } from "react-native-paper"
-import { InputHeader } from "react-native-paper-towel"
+import { Input, InputHeader } from "react-native-paper-towel"
 
 import { useSettings } from "../../services/settings"
 
 
-export function InputHeaderScreen() {
+export function InputScreen() {
 
 
     const navigation = useNavigation()
     const { colors } = useMaterialTheme()
     const { settings, setSettings } = useSettings()
 
-    const [title, setTitle] = useState("InputHeader")
+    const [titleInputHeader, setTitleInputHeader] = useState("InputHeader")
+    const [titleInput, setTitleInput] = useState("Input")
 
 
     function toggleTheme() {
@@ -26,10 +27,6 @@ export function InputHeaderScreen() {
         })
     }
 
-
-    useFocusEffect(useCallback(() => {
-        setTitle("InputHeader")
-    }, []))
 
     useLayoutEffect(() => {
         navigation.setOptions({
@@ -44,8 +41,8 @@ export function InputHeaderScreen() {
                 <DrawerToggleButton tintColor={colors.onBackground} />
 
                 <InputHeader
-                    value={title}
-                    onChangeText={setTitle}
+                    value={titleInputHeader}
+                    onChangeText={setTitleInputHeader}
                     placeholder={"Insert title here..."}
                 />
 
@@ -55,6 +52,14 @@ export function InputHeaderScreen() {
                     color={colors.onBackground}
                 />
             </Appbar>
+
+            <View style={{ flex: 1, padding: 16, gap: 16 }}>
+                <Input
+                    value={titleInput}
+                    onChangeText={setTitleInput}
+                    placeholder={"Insert input title here..."}
+                />
+            </View>
         </View>
     )
 }
