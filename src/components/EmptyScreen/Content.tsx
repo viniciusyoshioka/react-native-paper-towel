@@ -1,10 +1,17 @@
 import { View, ViewProps, ViewStyle } from "react-native"
 
 
-export interface EmptyScreenContentProps extends ViewProps {}
+export interface EmptyScreenContentProps extends ViewProps {
+    visible?: boolean
+}
 
 
 export function EmptyScreenContent(props: EmptyScreenContentProps) {
+
+
+    if (!props.visible) return null
+
+
     return (
         <View
             {...props}

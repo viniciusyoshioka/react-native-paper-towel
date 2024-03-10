@@ -30,7 +30,15 @@ export function App() {
 ### EmptyScreen.Content
 
 The component that fills the screen and contains the icon, image and/or
-message. Its props are the same as `ViewProps`.
+message.
+
+#### Props
+
+Its props extends `ViewProps`.
+
+| Name | Required | Default value | Description |
+|------|----------|---------------|-------------|
+`visible` | No | `true` | Whether the component is visible or not. Useful to show/hide the component when a list can be empty.
 
 ### EmptyScreen.Icon
 
