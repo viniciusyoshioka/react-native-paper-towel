@@ -1,5 +1,6 @@
 export * from "./EmptyScreen"
 export * from "./Icon"
+export * from "./Input"
 export * from "./InputHeader"
 export * from "./LoadingModal"
 export * from "./Pressable"
