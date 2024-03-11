@@ -4,7 +4,7 @@ import { useLayoutEffect, useState } from "react"
 import { useMaterialTheme } from "react-material-design-provider"
 import { View } from "react-native"
 import { Appbar } from "react-native-paper"
-import { Input, InputHeader } from "react-native-paper-towel"
+import { Input, InputHeader, InputPassword } from "react-native-paper-towel"
 
 import { useSettings } from "../../services/settings"
 
@@ -18,6 +18,7 @@ export function InputScreen() {
 
     const [titleInputHeader, setTitleInputHeader] = useState("InputHeader")
     const [titleInput, setTitleInput] = useState("Input")
+    const [passwordInput, setPasswordInput] = useState("password")
 
 
     function toggleTheme() {
@@ -58,6 +59,12 @@ export function InputScreen() {
                     value={titleInput}
                     onChangeText={setTitleInput}
                     placeholder={"Insert input title here..."}
+                />
+
+                <InputPassword
+                    value={passwordInput}
+                    onChangeText={setPasswordInput}
+                    placeholder={"Insert password here..."}
                 />
             </View>
         </View>
