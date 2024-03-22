@@ -9,7 +9,7 @@ export interface EmptyScreenContentProps extends ViewProps {
 export function EmptyScreenContent(props: EmptyScreenContentProps) {
 
 
-  if (!props.visible) return null
+  if (props.visible !== true) return null
 
 
   return (
