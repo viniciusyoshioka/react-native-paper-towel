@@ -18,54 +18,54 @@ const Drawer = createDrawerNavigator()
 export function Router() {
 
 
-    const { settings, setSettings } = useSettings()
-    const { colors } = useMaterialTheme()
+  const { settings, setSettings } = useSettings()
+  const { colors } = useMaterialTheme()
 
 
-    function toggleTheme() {
-        setSettings({ ...settings, isDark: !settings.isDark })
-    }
+  function toggleTheme() {
+    setSettings({ ...settings, isDark: !settings.isDark })
+  }
 
-    const headerRight: DrawerNavigationOptions["headerRight"] = props => (
-        <Pressable onPress={toggleTheme} style={{ marginRight: 16 }}>
-            <Icon name={"brightness-6"} color={props.tintColor} />
-        </Pressable>
-    )
-
-
-    const screenOptions: DrawerNavigationOptions = {
-        headerStyle: {
-            backgroundColor: colors.background,
-        },
-        headerTintColor: colors.onBackground,
-        headerShadowVisible: false,
-        headerRight,
-        drawerStyle: {
-            backgroundColor: colors.surface,
-        },
-        drawerInactiveTintColor: colors.onSurfaceVariant,
-        drawerActiveBackgroundColor: colors.secondaryContainer,
-        drawerActiveTintColor: colors.onSecondaryContainer,
-        sceneContainerStyle: {
-            backgroundColor: colors.background,
-        },
-    }
+  const headerRight: DrawerNavigationOptions["headerRight"] = props => (
+    <Pressable onPress={toggleTheme} style={{ marginRight: 16 }}>
+      <Icon name={"brightness-6"} color={props.tintColor} />
+    </Pressable>
+  )
 
 
-    return (
-        <NavigationContainer>
-            <StatusBar
-                backgroundColor={colors.background}
-                barStyle={settings.isDark ? "light-content" : "dark-content"}
-            />
+  const screenOptions: DrawerNavigationOptions = {
+    headerStyle: {
+      backgroundColor: colors.background,
+    },
+    headerTintColor: colors.onBackground,
+    headerShadowVisible: false,
+    headerRight,
+    drawerStyle: {
+      backgroundColor: colors.surface,
+    },
+    drawerInactiveTintColor: colors.onSurfaceVariant,
+    drawerActiveBackgroundColor: colors.secondaryContainer,
+    drawerActiveTintColor: colors.onSecondaryContainer,
+    sceneContainerStyle: {
+      backgroundColor: colors.background,
+    },
+  }
 
-            <Drawer.Navigator screenOptions={screenOptions}>
-                <Drawer.Screen name={"EmptyScreen"} component={EmptyScreenScreen} />
-                <Drawer.Screen name={"Icon"} component={IconScreen} />
-                <Drawer.Screen name={"Inputs"} component={InputScreen} />
-                <Drawer.Screen name={"LoadingModal"} component={LoadingModalScreen} />
-                <Drawer.Screen name={"Pressable"} component={PressableScreen} />
-            </Drawer.Navigator>
-        </NavigationContainer>
-    )
+
+  return (
+    <NavigationContainer>
+      <StatusBar
+        backgroundColor={colors.background}
+        barStyle={settings.isDark ? "light-content" : "dark-content"}
+      />
+
+      <Drawer.Navigator screenOptions={screenOptions}>
+        <Drawer.Screen name={"EmptyScreen"} component={EmptyScreenScreen} />
+        <Drawer.Screen name={"Icon"} component={IconScreen} />
+        <Drawer.Screen name={"Inputs"} component={InputScreen} />
+        <Drawer.Screen name={"LoadingModal"} component={LoadingModalScreen} />
+        <Drawer.Screen name={"Pressable"} component={PressableScreen} />
+      </Drawer.Navigator>
+    </NavigationContainer>
+  )
 }

@@ -11,22 +11,22 @@ import { ThemeProvider } from "./theme"
 export function App() {
 
 
-    useKeepAwakeOnDev()
+  useKeepAwakeOnDev()
 
 
-    const colorScheme = useColorScheme()
-    const [settings, setSettings] = useState<Settings>({
-        isDark: colorScheme === "dark",
-    })
+  const colorScheme = useColorScheme()
+  const [settings, setSettings] = useState<Settings>({
+    isDark: colorScheme === "dark",
+  })
 
 
-    return (
-        <GestureHandlerRootView style={{ flex: 1 }}>
-            <SettingsProvider settings={settings} setSettings={setSettings}>
-                <ThemeProvider>
-                    <Router />
-                </ThemeProvider>
-            </SettingsProvider>
-        </GestureHandlerRootView>
-    )
+  return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <SettingsProvider settings={settings} setSettings={setSettings}>
+        <ThemeProvider>
+          <Router />
+        </ThemeProvider>
+      </SettingsProvider>
+    </GestureHandlerRootView>
+  )
 }

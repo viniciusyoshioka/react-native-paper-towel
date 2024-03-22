@@ -12,61 +12,61 @@ import { useSettings } from "../../services/settings"
 export function InputScreen() {
 
 
-    const navigation = useNavigation()
-    const { colors } = useMaterialTheme()
-    const { settings, setSettings } = useSettings()
+  const navigation = useNavigation()
+  const { colors } = useMaterialTheme()
+  const { settings, setSettings } = useSettings()
 
-    const [titleInputHeader, setTitleInputHeader] = useState("InputHeader")
-    const [titleInput, setTitleInput] = useState("Input")
-    const [passwordInput, setPasswordInput] = useState("password")
-
-
-    function toggleTheme() {
-        setSettings({
-            ...settings,
-            isDark: !settings.isDark,
-        })
-    }
+  const [titleInputHeader, setTitleInputHeader] = useState("InputHeader")
+  const [titleInput, setTitleInput] = useState("Input")
+  const [passwordInput, setPasswordInput] = useState("password")
 
 
-    useLayoutEffect(() => {
-        navigation.setOptions({
-            headerShown: false,
-        })
-    }, [])
+  function toggleTheme() {
+    setSettings({
+      ...settings,
+      isDark: !settings.isDark,
+    })
+  }
 
 
-    return (
-        <View style={{ flex: 1 }}>
-            <Appbar style={{ backgroundColor: colors.background }}>
-                <DrawerToggleButton tintColor={colors.onBackground} />
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerShown: false,
+    })
+  }, [])
 
-                <InputHeader
-                    value={titleInputHeader}
-                    onChangeText={setTitleInputHeader}
-                    placeholder={"Insert title here..."}
-                />
 
-                <Appbar.Action
-                    icon={"brightness-6"}
-                    onPress={toggleTheme}
-                    color={colors.onBackground}
-                />
-            </Appbar>
+  return (
+    <View style={{ flex: 1 }}>
+      <Appbar style={{ backgroundColor: colors.background }}>
+        <DrawerToggleButton tintColor={colors.onBackground} />
 
-            <View style={{ flex: 1, padding: 16, gap: 16 }}>
-                <Input
-                    value={titleInput}
-                    onChangeText={setTitleInput}
-                    placeholder={"Insert input title here..."}
-                />
+        <InputHeader
+          value={titleInputHeader}
+          onChangeText={setTitleInputHeader}
+          placeholder={"Insert title here..."}
+        />
 
-                <InputPassword
-                    value={passwordInput}
-                    onChangeText={setPasswordInput}
-                    placeholder={"Insert password here..."}
-                />
-            </View>
-        </View>
-    )
+        <Appbar.Action
+          icon={"brightness-6"}
+          onPress={toggleTheme}
+          color={colors.onBackground}
+        />
+      </Appbar>
+
+      <View style={{ flex: 1, padding: 16, gap: 16 }}>
+        <Input
+          value={titleInput}
+          onChangeText={setTitleInput}
+          placeholder={"Insert input title here..."}
+        />
+
+        <InputPassword
+          value={passwordInput}
+          onChangeText={setPasswordInput}
+          placeholder={"Insert password here..."}
+        />
+      </View>
+    </View>
+  )
 }

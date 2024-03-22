@@ -6,28 +6,28 @@ import { LoadingModal, useModal } from "react-native-paper-towel"
 export function LoadingModalScreen() {
 
 
-    const loading = useModal()
+  const loading = useModal()
 
 
-    function showModal() {
-        loading.show()
+  function showModal() {
+    loading.show()
 
-        setTimeout(loading.hide, 3000)
-    }
+    setTimeout(loading.hide, 3000)
+  }
 
 
-    return (
-        <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-            <Button
-                mode={"contained"}
-                children={"Show LoadingModal"}
-                onPress={showModal}
-            />
+  return (
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <Button
+        mode={"contained"}
+        children={"Show LoadingModal"}
+        onPress={showModal}
+      />
 
-            <LoadingModal
-                visible={loading.isVisible}
-                message={"Loading..."}
-            />
-        </View>
-    )
+      <LoadingModal
+        visible={loading.isVisible}
+        message={"Loading..."}
+      />
+    </View>
+  )
 }
