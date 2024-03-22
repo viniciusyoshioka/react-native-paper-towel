@@ -16,7 +16,7 @@
     "author": "Vinicius Yoshioka <71671043+viniciusyoshioka@users.noreply.github.com> (https://github.com/viniciusyoshioka)",
     "repository": {
         "type": "git",
-        "url": "https://github.com/viniciusyoshioka/react-native-paper-towel.git"
+        "url": "git+https://github.com/viniciusyoshioka/react-native-paper-towel.git"
     },
     "bugs": {
         "url": "https://github.com/viniciusyoshioka/react-native-paper-towel/issues"
