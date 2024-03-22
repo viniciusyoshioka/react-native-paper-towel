@@ -11,8 +11,8 @@ export type { EmptyScreenMessageProps } from "./Message"
 
 
 export const EmptyScreen = {
-    Content: EmptyScreenContent,
-    Icon: EmptyScreenIcon,
-    Image: EmptyScreenImage,
-    Message: EmptyScreenMessage,
+  Content: EmptyScreenContent,
+  Icon: EmptyScreenIcon,
+  Image: EmptyScreenImage,
+  Message: EmptyScreenMessage,
 }

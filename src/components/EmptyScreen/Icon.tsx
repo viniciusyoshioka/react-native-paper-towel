@@ -9,15 +9,15 @@ export type EmptyScreenIconProps<G extends IconGroup> = IconProps<G>
 export function EmptyScreenIcon<G extends IconGroup>(props: EmptyScreenIconProps<G>) {
 
 
-    const { group, ...rest } = props
-    const { colors } = useMaterialTheme()
+  const { group, ...rest } = props
+  const { colors } = useMaterialTheme()
 
 
-    return (
-        <Icon
-            color={colors.onBackground}
-            {...rest}
-            group={group}
-        />
-    )
+  return (
+    <Icon
+      color={colors.onBackground}
+      {...rest}
+      group={group}
+    />
+  )
 }

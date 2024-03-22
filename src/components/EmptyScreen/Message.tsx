@@ -9,22 +9,22 @@ export interface EmptyScreenMessageProps extends TextProps<"bodyLarge"> {}
 export function EmptyScreenMessage(props: EmptyScreenMessageProps) {
 
 
-    const { colors } = useMaterialTheme()
+  const { colors } = useMaterialTheme()
 
 
-    const textStyle: TextStyle = {
-        color: colors.onBackground,
-        maxWidth: 256,
-        textAlignVertical: "center",
-        textAlign: "center",
-    }
+  const textStyle: TextStyle = {
+    color: colors.onBackground,
+    maxWidth: 256,
+    textAlignVertical: "center",
+    textAlign: "center",
+  }
 
 
-    return (
-        <Text
-            variant={"bodyLarge"}
-            {...props}
-            style={[textStyle, props.style]}
-        />
-    )
+  return (
+    <Text
+      variant={"bodyLarge"}
+      {...props}
+      style={[textStyle, props.style]}
+    />
+  )
 }

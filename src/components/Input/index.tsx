@@ -10,24 +10,24 @@ export interface InputProps extends TextInputProps {}
 export const Input = forwardRef<RNTextInput, InputProps>((props, ref) => {
 
 
-    const { colors } = useMaterialTheme()
+  const { colors } = useMaterialTheme()
 
 
-    const inputStyle: TextStyle = {
-        backgroundColor: colors.surfaceContainerHighest,
-    }
+  const inputStyle: TextStyle = {
+    backgroundColor: colors.surfaceContainerHighest,
+  }
 
 
-    return (
-        <TextInput
-            ref={ref}
-            mode={"outlined"}
-            dense={true}
-            outlineColor={"transparent"}
-            selectionColor={colors.primaryContainer}
-            cursorColor={colors.primary}
-            {...props}
-            style={[inputStyle, props.style]}
-        />
-    )
+  return (
+    <TextInput
+      ref={ref}
+      mode={"outlined"}
+      dense={true}
+      outlineColor={"transparent"}
+      selectionColor={colors.primaryContainer}
+      cursorColor={colors.primary}
+      {...props}
+      style={[inputStyle, props.style]}
+    />
+  )
 })

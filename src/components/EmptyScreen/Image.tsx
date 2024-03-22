@@ -8,20 +8,20 @@ export interface EmptyScreenImageProps extends ImageProps {}
 export function EmptyScreenImage(props: EmptyScreenImageProps) {
 
 
-    const { colors } = useMaterialTheme()
+  const { colors } = useMaterialTheme()
 
 
-    const imageStyle: ImageStyle = {
-        width: 96,
-        height: 96,
-    }
+  const imageStyle: ImageStyle = {
+    width: 96,
+    height: 96,
+  }
 
 
-    return (
-        <Image
-            tintColor={props.tintColor ?? colors.onBackground}
-            {...props}
-            style={[imageStyle, props.style]}
-        />
-    )
+  return (
+    <Image
+      tintColor={props.tintColor ?? colors.onBackground}
+      {...props}
+      style={[imageStyle, props.style]}
+    />
+  )
 }

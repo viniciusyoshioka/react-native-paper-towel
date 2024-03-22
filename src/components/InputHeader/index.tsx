@@ -9,27 +9,27 @@ export interface InputHeaderProps extends TextInputProps {}
 export const InputHeader = forwardRef<TextInput, InputHeaderProps>((props, ref) => {
 
 
-    const { colors, typography } = useMaterialTheme()
+  const { colors, typography } = useMaterialTheme()
 
 
-    const inputStyle: TextStyle = {
-        flex: 1,
-        padding: 0,
-        color: colors.onSurface,
-        ...typography.title.large,
-    }
+  const inputStyle: TextStyle = {
+    flex: 1,
+    padding: 0,
+    color: colors.onSurface,
+    ...typography.title.large,
+  }
 
 
-    return (
-        <TextInput
-            ref={ref}
-            blurOnSubmit={false}
-            placeholderTextColor={colors.onSurfaceVariant}
-            selectionColor={colors.primaryContainer}
-            cursorColor={colors.primary}
-            selectTextOnFocus={true}
-            {...props}
-            style={[inputStyle, props.style]}
-        />
-    )
+  return (
+    <TextInput
+      ref={ref}
+      blurOnSubmit={false}
+      placeholderTextColor={colors.onSurfaceVariant}
+      selectionColor={colors.primaryContainer}
+      cursorColor={colors.primary}
+      selectTextOnFocus={true}
+      {...props}
+      style={[inputStyle, props.style]}
+    />
+  )
 })
