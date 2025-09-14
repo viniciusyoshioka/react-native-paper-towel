@@ -7,7 +7,6 @@ module.exports = {
     tsconfigRootDir: __dirname,
   },
   ignorePatterns: [
-    "example",
     "lib",
   ],
 }
