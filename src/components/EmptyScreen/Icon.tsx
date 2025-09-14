@@ -1,23 +1,23 @@
 import { useMaterialTheme } from "react-material-design-provider"
 
-import { Icon, IconGroup, IconProps } from "../Icon"
+import { Icon, IconNames, IconProps } from "../Icon"
 
 
-export type EmptyScreenIconProps<G extends IconGroup> = IconProps<G>
+export type EmptyScreenIconProps<N extends IconNames = IconNames> = IconProps<N>
 
 
-export function EmptyScreenIcon<G extends IconGroup>(props: EmptyScreenIconProps<G>) {
+export function EmptyScreenIcon<
+  N extends IconNames = IconNames,
+>(props: EmptyScreenIconProps<N>) {
 
 
-  const { group, ...rest } = props
   const { colors } = useMaterialTheme()
 
 
   return (
     <Icon
       color={colors.onBackground}
-      {...rest}
-      group={group}
+      {...props}
     />
   )
 }
