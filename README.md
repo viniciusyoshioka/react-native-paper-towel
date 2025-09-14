@@ -21,23 +21,18 @@ yarn add react-native-paper-towel
 ```
 
 This library requires `react-native-paper`, `react-material-design-provider`
-and `react-native-vector-icons`. Follow their installation guide:
+and `@react-native-vector-icons/material-design-icons`. Follow their installation guide:
 
 - [`react-native-paper`](https://callstack.github.io/react-native-paper/docs/guides/getting-started)
 - [`react-material-design-provider`](https://github.com/viniciusyoshioka/react-material-design-provider)
-- [`react-native-vector-icons`](https://github.com/oblador/react-native-vector-icons)
-
-**Attention**: The `react-native-vector-icons` used in this library is not from
-NPM or from the original repository. It uses a fork that implements variants
-for Google's Material Icon. So, when installing vector icons, install the
-library from the forked repository (https://github.com/viniciusyoshioka/react-native-vector-icons).
+- [`@react-native-vector-icons/material-design-icons`](https://github.com/oblador/react-native-vector-icons)
 
 Install the required libraries with:
 
 ```sh
-npm install react-native-paper react-material-design-provider https://github.com/viniciusyoshioka/react-native-vector-icons.git
+npm install react-native-paper react-material-design-provider @react-native-vector-icons/material-design-icons
 # or
-yarn add react-native-paper react-material-design-provider https://github.com/viniciusyoshioka/react-native-vector-icons.git
+yarn add react-native-paper react-material-design-provider @react-native-vector-icons/material-design-icons
 ```
 
 ## Docs
