@@ -16,7 +16,11 @@ To install the library, run:
 
 ```sh
 npm install react-native-paper-towel
-# or
+```
+
+or
+
+```sh
 yarn add react-native-paper-towel
 ```
 
@@ -31,7 +35,11 @@ Install the required libraries with:
 
 ```sh
 npm install react-native-paper react-material-design-provider @react-native-vector-icons/material-design-icons
-# or
+```
+
+or
+
+```sh
 yarn add react-native-paper react-material-design-provider @react-native-vector-icons/material-design-icons
 ```
 
