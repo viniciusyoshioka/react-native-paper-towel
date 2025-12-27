@@ -1,4 +1,5 @@
-import { View, ViewProps, ViewStyle } from "react-native"
+import type { ViewProps, ViewStyle } from 'react-native'
+import { View } from 'react-native'
 
 
 export interface EmptyScreenContentProps extends ViewProps {
@@ -23,7 +24,7 @@ export function EmptyScreenContent(props: EmptyScreenContentProps) {
 
 const emptyScreenContentStyle: ViewStyle = {
   flex: 1,
-  alignItems: "center",
-  justifyContent: "center",
+  alignItems: 'center',
+  justifyContent: 'center',
   gap: 8,
 }

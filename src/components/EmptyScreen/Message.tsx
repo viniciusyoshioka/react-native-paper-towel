@@ -1,9 +1,10 @@
-import { useMaterialTheme } from "react-material-design-provider"
-import { TextStyle } from "react-native"
-import { Text, TextProps } from "react-native-paper"
+import { useMaterialTheme } from 'react-material-design-provider'
+import type { TextStyle } from 'react-native'
+import type { TextProps } from 'react-native-paper'
+import { Text } from 'react-native-paper'
 
 
-export interface EmptyScreenMessageProps extends TextProps<"bodyLarge"> {}
+export interface EmptyScreenMessageProps extends TextProps<'bodyLarge'> {}
 
 
 export function EmptyScreenMessage(props: EmptyScreenMessageProps) {
@@ -15,14 +16,14 @@ export function EmptyScreenMessage(props: EmptyScreenMessageProps) {
   const textStyle: TextStyle = {
     color: colors.onBackground,
     maxWidth: 256,
-    textAlignVertical: "center",
-    textAlign: "center",
+    textAlignVertical: 'center',
+    textAlign: 'center',
   }
 
 
   return (
     <Text
-      variant={"bodyLarge"}
+      variant={'bodyLarge'}
       {...props}
       style={[textStyle, props.style]}
     />

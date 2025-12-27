@@ -1,6 +1,7 @@
-import { forwardRef } from "react"
-import { useMaterialTheme } from "react-material-design-provider"
-import { TextInput, TextInputProps, TextStyle } from "react-native"
+import { forwardRef } from 'react'
+import { useMaterialTheme } from 'react-material-design-provider'
+import type { TextInputProps, TextStyle } from 'react-native'
+import { TextInput } from 'react-native'
 
 
 export interface InputHeaderProps extends TextInputProps {}

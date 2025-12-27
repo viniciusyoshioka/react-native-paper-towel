@@ -1,13 +1,13 @@
-import { EmptyScreenContent } from "./Content"
-import { EmptyScreenIcon } from "./Icon"
-import { EmptyScreenImage } from "./Image"
-import { EmptyScreenMessage } from "./Message"
+import { EmptyScreenContent } from './Content.tsx'
+import { EmptyScreenIcon } from './Icon.tsx'
+import { EmptyScreenImage } from './Image.tsx'
+import { EmptyScreenMessage } from './Message.tsx'
 
 
-export type { EmptyScreenContentProps } from "./Content"
-export type { EmptyScreenIconProps } from "./Icon"
-export type { EmptyScreenImageProps } from "./Image"
-export type { EmptyScreenMessageProps } from "./Message"
+export type { EmptyScreenContentProps } from './Content.tsx'
+export type { EmptyScreenIconProps } from './Icon.tsx'
+export type { EmptyScreenImageProps } from './Image.tsx'
+export type { EmptyScreenMessageProps } from './Message.tsx'
 
 
 export const EmptyScreen = {

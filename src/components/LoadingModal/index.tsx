@@ -1,6 +1,7 @@
-import { useMaterialTheme } from "react-material-design-provider"
-import { ActivityIndicator, TextStyle, ViewStyle } from "react-native"
-import { Dialog, Portal, Text } from "react-native-paper"
+import { useMaterialTheme } from 'react-material-design-provider'
+import type { TextStyle, ViewStyle } from 'react-native'
+import { ActivityIndicator } from 'react-native'
+import { Dialog, Portal, Text } from 'react-native-paper'
 
 
 export interface LoadingModalProps {
@@ -16,9 +17,9 @@ export function LoadingModal(props: LoadingModalProps) {
 
 
   const contentStyle: ViewStyle = {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "flex-start",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
     gap: 16,
   }
 
@@ -33,12 +34,12 @@ export function LoadingModal(props: LoadingModalProps) {
       <Dialog visible={props.visible} dismissable={false}>
         <Dialog.Content style={contentStyle}>
           <ActivityIndicator
-            size={"large"}
+            size={'large'}
             color={colors.onSurface}
           />
 
           <Text
-            variant={"bodyLarge"}
+            variant={'bodyLarge'}
             style={messageStyle}
             children={props.message}
           />

@@ -1,12 +1,14 @@
-import {
+import type {
   PressableStateCallbackType,
   PressableProps as RNPressableProps,
-  Pressable as RNPressble,
   StyleProp,
+  ViewStyle,
+} from 'react-native'
+import {
+  Pressable as RNPressble,
   StyleSheet,
   View,
-  ViewStyle,
-} from "react-native"
+} from 'react-native'
 
 
 type PressableStyleProp = StyleProp<ViewStyle>
@@ -30,18 +32,18 @@ function processStyle(style: PressableStyleProp): ProcessedStyle {
 
   if (style === undefined) return { viewStyle, pressableStyle }
 
-  if (typeof style === "function") {
+  if (typeof style === 'function') {
     style = style({ pressed: false })
   }
-  if (typeof style === "object") {
+  if (typeof style === 'object') {
     styleObject = StyleSheet.flatten(style) as AnyStyle
   }
 
-  const keys = Object.keys(styleObject) as string[]
+  const keys = Object.keys(styleObject)
   keys.forEach(key => {
-    const includesPadding = key.toLowerCase().includes("padding")
-    const includesMargin = key.toLowerCase().includes("margin")
-    const includesBorder = key.toLowerCase().includes("border")
+    const includesPadding = key.toLowerCase().includes('padding')
+    const includesMargin = key.toLowerCase().includes('margin')
+    const includesBorder = key.toLowerCase().includes('border')
     const value = styleObject[key]
 
     if (includesPadding) {
@@ -68,9 +70,9 @@ export function Pressable(props: PressableProps) {
 
 
   return (
-    <View style={[viewStyle, { overflow: "hidden" }]}>
+    <View style={[viewStyle, { overflow: 'hidden' }]}>
       <RNPressble
-        android_ripple={{ color: "white" }}
+        android_ripple={{ color: 'white' }}
         {...props}
         style={pressableStyle}
       />

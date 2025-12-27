@@ -1,8 +1,9 @@
-import { forwardRef, useState } from "react"
-import { KeyboardTypeOptions, TextInput as RNTextInput } from "react-native"
-import { TextInput } from "react-native-paper"
+import { forwardRef, useState } from 'react'
+import type { KeyboardTypeOptions, TextInput as RNTextInput } from 'react-native'
+import { TextInput } from 'react-native-paper'
 
-import { Input, InputProps } from "../Input"
+import type { InputProps } from '../Input/index.tsx'
+import { Input } from '../Input/index.tsx'
 
 
 export interface InputPasswordProps extends InputProps {}
@@ -17,14 +18,14 @@ export const InputPassword = forwardRef<RNTextInput, InputPasswordProps>((props,
     ? hidePassword
     : props.secureTextEntry
   const keyboardType: KeyboardTypeOptions = props.keyboardType === undefined
-    ? isPasswordHidden ? "default" : "visible-password"
+    ? isPasswordHidden ? 'default' : 'visible-password'
     : props.keyboardType
 
 
   function right() {
     return (
       <TextInput.Icon
-        icon={isPasswordHidden ? "eye-off" : "eye"}
+        icon={isPasswordHidden ? 'eye-off' : 'eye'}
         onPress={() => setHidePassword(!isPasswordHidden)}
         forceTextInputFocus={false}
       />
@@ -35,8 +36,8 @@ export const InputPassword = forwardRef<RNTextInput, InputPasswordProps>((props,
   return (
     <Input
       ref={ref}
-      autoCapitalize={"none"}
-      autoComplete={"new-password"}
+      autoCapitalize={'none'}
+      autoComplete={'new-password'}
       autoCorrect={false}
       right={props.right === undefined ? right() : props.right}
       {...props}

@@ -1,5 +1,6 @@
-import { useMaterialTheme } from "react-material-design-provider"
-import { Image, ImageProps, ImageStyle } from "react-native"
+import { useMaterialTheme } from 'react-material-design-provider'
+import type { ImageProps, ImageStyle } from 'react-native'
+import { Image } from 'react-native'
 
 
 export interface EmptyScreenImageProps extends ImageProps {}

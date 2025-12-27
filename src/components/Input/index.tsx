@@ -1,7 +1,8 @@
-import { forwardRef } from "react"
-import { useMaterialTheme } from "react-material-design-provider"
-import { TextInput as RNTextInput, TextStyle } from "react-native"
-import { TextInput, TextInputProps } from "react-native-paper"
+import { forwardRef } from 'react'
+import { useMaterialTheme } from 'react-material-design-provider'
+import type { TextInput as RNTextInput, TextStyle } from 'react-native'
+import type { TextInputProps } from 'react-native-paper'
+import { TextInput } from 'react-native-paper'
 
 
 export interface InputProps extends TextInputProps {}
@@ -21,9 +22,9 @@ export const Input = forwardRef<RNTextInput, InputProps>((props, ref) => {
   return (
     <TextInput
       ref={ref}
-      mode={"outlined"}
+      mode={'outlined'}
       dense={true}
-      outlineColor={"transparent"}
+      outlineColor={'transparent'}
       selectionColor={colors.primaryContainer}
       cursorColor={colors.primary}
       {...props}
