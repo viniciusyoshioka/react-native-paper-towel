@@ -1,4 +1,4 @@
-import { forwardRef, useCallback, useMemo, useState } from 'react'
+import { forwardRef, useCallback, useMemo, useState, type ReactNode } from 'react'
 import type { KeyboardTypeOptions, TextInput as RNTextInput } from 'react-native'
 import { TextInput } from 'react-native-paper'
 
@@ -26,7 +26,7 @@ export const InputPassword = forwardRef<RNTextInput, InputPasswordProps>((props,
     setHidePassword(!isPasswordHidden)
   }, [isPasswordHidden])
 
-  const right = useMemo(() => {
+  const right = useMemo((): ReactNode => {
     if (props.right) {
       return props.right
     }
