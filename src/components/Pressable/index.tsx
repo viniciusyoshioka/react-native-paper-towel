@@ -1,4 +1,6 @@
+import { useMemo } from 'react'
 import type {
+  PressableAndroidRippleConfig,
   PressableStateCallbackType,
   PressableProps as RNPressableProps,
   StyleProp,
@@ -66,15 +68,25 @@ export interface PressableProps extends RNPressableProps {}
 export function Pressable(props: PressableProps) {
 
 
-  const { viewStyle, pressableStyle } = processStyle(props.style)
+  const processedStyle = useMemo<ProcessedStyle>(() => {
+    return processStyle(props.style)
+  }, [props.style])
+
+  const wrapperStyle = useMemo<StyleProp<ViewStyle>>(() => {
+    return [processedStyle.viewStyle, { overflow: 'hidden' }]
+  }, [processedStyle.viewStyle])
+
+  const androidRippleStyle = useMemo<PressableAndroidRippleConfig>(() => {
+    return { color: 'white' }
+  }, [])
 
 
   return (
-    <View style={[viewStyle, { overflow: 'hidden' }]}>
+    <View style={wrapperStyle}>
       <RNPressble
-        android_ripple={{ color: 'white' }}
+        android_ripple={androidRippleStyle}
         {...props}
-        style={pressableStyle}
+        style={processedStyle.pressableStyle}
       />
     </View>
   )

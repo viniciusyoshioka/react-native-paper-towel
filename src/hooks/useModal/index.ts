@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 
 
 export type UseModal = {
@@ -14,9 +14,22 @@ export function useModal(isVisible: boolean = false): UseModal {
   const [isOpen, setIsOpen] = useState(isVisible)
 
 
-  return {
-    isVisible: isOpen,
-    show: () => setIsOpen(true),
-    hide: () => setIsOpen(false),
-  }
+  const show = useCallback(() => {
+    setIsOpen(true)
+  }, [])
+
+  const hide = useCallback(() => {
+    setIsOpen(false)
+  }, [])
+
+  const modal = useMemo<UseModal>(() => {
+    return {
+      isVisible: isOpen,
+      show,
+      hide,
+    }
+  }, [isOpen, show, hide])
+
+
+  return modal
 }

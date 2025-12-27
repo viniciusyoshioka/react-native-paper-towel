@@ -1,6 +1,6 @@
-import { forwardRef } from 'react'
+import { forwardRef, useMemo } from 'react'
 import { useMaterialTheme } from 'react-material-design-provider'
-import type { TextInput as RNTextInput, TextStyle } from 'react-native'
+import type { TextInput as RNTextInput, StyleProp, TextStyle } from 'react-native'
 import type { TextInputProps } from 'react-native-paper'
 import { TextInput } from 'react-native-paper'
 
@@ -14,9 +14,13 @@ export const Input = forwardRef<RNTextInput, InputProps>((props, ref) => {
   const { colors } = useMaterialTheme()
 
 
-  const inputStyle: TextStyle = {
-    backgroundColor: colors.surfaceContainerHighest,
-  }
+  const style = useMemo<StyleProp<TextStyle>>(() => {
+    const inputStyle: TextStyle = {
+      backgroundColor: colors.surfaceContainerHighest,
+    }
+
+    return [inputStyle, props.style]
+  }, [colors.surfaceContainerHighest, props.style])
 
 
   return (
@@ -28,7 +32,7 @@ export const Input = forwardRef<RNTextInput, InputProps>((props, ref) => {
       selectionColor={colors.primaryContainer}
       cursorColor={colors.primary}
       {...props}
-      style={[inputStyle, props.style]}
+      style={style}
     />
   )
 })

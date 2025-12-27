@@ -1,5 +1,6 @@
+import { useMemo } from 'react'
 import { useMaterialTheme } from 'react-material-design-provider'
-import type { TextStyle } from 'react-native'
+import type { StyleProp, TextStyle } from 'react-native'
 import type { TextProps } from 'react-native-paper'
 import { Text } from 'react-native-paper'
 
@@ -13,19 +14,23 @@ export function EmptyScreenMessage(props: EmptyScreenMessageProps) {
   const { colors } = useMaterialTheme()
 
 
-  const textStyle: TextStyle = {
-    color: colors.onBackground,
-    maxWidth: 256,
-    textAlignVertical: 'center',
-    textAlign: 'center',
-  }
+  const style = useMemo<StyleProp<TextStyle>>(() => {
+    const textStyle: TextStyle = {
+      color: colors.onBackground,
+      maxWidth: 256,
+      textAlignVertical: 'center',
+      textAlign: 'center',
+    }
+
+    return [textStyle, props.style]
+  }, [colors.onBackground, props.style])
 
 
   return (
     <Text
       variant={'bodyLarge'}
       {...props}
-      style={[textStyle, props.style]}
+      style={style}
     />
   )
 }

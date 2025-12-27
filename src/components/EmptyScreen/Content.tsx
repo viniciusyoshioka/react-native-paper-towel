@@ -1,4 +1,5 @@
-import type { ViewProps, ViewStyle } from 'react-native'
+import { useMemo } from 'react'
+import type { StyleProp, ViewProps, ViewStyle } from 'react-native'
 import { View } from 'react-native'
 
 
@@ -10,13 +11,21 @@ export interface EmptyScreenContentProps extends ViewProps {
 export function EmptyScreenContent(props: EmptyScreenContentProps) {
 
 
+  const style = useMemo<StyleProp<ViewStyle>>(() => {
+    return [
+      emptyScreenContentStyle,
+      props.style,
+    ]
+  }, [props.style])
+
+
   if (props.visible !== true) return null
 
 
   return (
     <View
       {...props}
-      style={[emptyScreenContentStyle, props.style]}
+      style={style}
     />
   )
 }

@@ -1,4 +1,4 @@
-import { forwardRef, useState } from 'react'
+import { forwardRef, useCallback, useMemo, useState } from 'react'
 import type { KeyboardTypeOptions, TextInput as RNTextInput } from 'react-native'
 import { TextInput } from 'react-native-paper'
 
@@ -22,15 +22,23 @@ export const InputPassword = forwardRef<RNTextInput, InputPasswordProps>((props,
     : props.keyboardType
 
 
-  function right() {
+  const toggleHidePassword = useCallback(() => {
+    setHidePassword(!isPasswordHidden)
+  }, [isPasswordHidden])
+
+  const right = useMemo(() => {
+    if (props.right) {
+      return props.right
+    }
+
     return (
       <TextInput.Icon
         icon={isPasswordHidden ? 'eye-off' : 'eye'}
-        onPress={() => setHidePassword(!isPasswordHidden)}
+        onPress={toggleHidePassword}
         forceTextInputFocus={false}
       />
     )
-  }
+  }, [props.right, isPasswordHidden, toggleHidePassword])
 
 
   return (
@@ -39,7 +47,7 @@ export const InputPassword = forwardRef<RNTextInput, InputPasswordProps>((props,
       autoCapitalize={'none'}
       autoComplete={'new-password'}
       autoCorrect={false}
-      right={props.right === undefined ? right() : props.right}
+      right={right}
       {...props}
       secureTextEntry={isPasswordHidden}
       keyboardType={keyboardType}

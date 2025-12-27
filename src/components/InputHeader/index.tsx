@@ -1,6 +1,6 @@
-import { forwardRef } from 'react'
+import { forwardRef, useMemo } from 'react'
 import { useMaterialTheme } from 'react-material-design-provider'
-import type { TextInputProps, TextStyle } from 'react-native'
+import type { StyleProp, TextInputProps, TextStyle } from 'react-native'
 import { TextInput } from 'react-native'
 
 
@@ -13,12 +13,16 @@ export const InputHeader = forwardRef<TextInput, InputHeaderProps>((props, ref) 
   const { colors, typography } = useMaterialTheme()
 
 
-  const inputStyle: TextStyle = {
-    flex: 1,
-    padding: 0,
-    color: colors.onSurface,
-    ...typography.title.large,
-  }
+  const style = useMemo<StyleProp<TextStyle>>(() => {
+    const inputStyle: TextStyle = {
+      flex: 1,
+      padding: 0,
+      color: colors.onSurface,
+      ...typography.title.large,
+    }
+
+    return [inputStyle, props.style]
+  }, [colors.onSurface, typography.title.large, props.style])
 
 
   return (
@@ -30,7 +34,7 @@ export const InputHeader = forwardRef<TextInput, InputHeaderProps>((props, ref) 
       cursorColor={colors.primary}
       selectTextOnFocus={true}
       {...props}
-      style={[inputStyle, props.style]}
+      style={style}
     />
   )
 })

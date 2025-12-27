@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import { useMaterialTheme } from 'react-material-design-provider'
 import type { TextStyle, ViewStyle } from 'react-native'
 import { ActivityIndicator } from 'react-native'
@@ -16,17 +17,21 @@ export function LoadingModal(props: LoadingModalProps) {
   const { colors } = useMaterialTheme()
 
 
-  const contentStyle: ViewStyle = {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-    gap: 16,
-  }
+  const contentStyle = useMemo<ViewStyle>(() => {
+    return {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'flex-start',
+      gap: 16,
+    }
+  }, [])
 
-  const messageStyle: TextStyle = {
-    flex: 1,
-    color: colors.onSurface,
-  }
+  const messageStyle = useMemo<TextStyle>(() => {
+    return {
+      flex: 1,
+      color: colors.onSurface,
+    }
+  }, [colors.onSurface])
 
 
   return (
