@@ -12,6 +12,9 @@ importers:
         specifier: '*'
         version: 19.2.4
     devDependencies:
+      '@react-native-vector-icons/common':
+        specifier: ^13.0.0
+        version: 13.0.0(@react-native/assets-registry@0.83.4)(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)
       '@react-native-vector-icons/material-design-icons':
         specifier: ^12.5.0
         version: 12.5.0(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)
@@ -844,6 +847,21 @@ packages:
       react-native: '*'
     peerDependenciesMeta:
       '@react-native-vector-icons/get-image':
+        optional: true
+
+  '@react-native-vector-icons/common@13.0.0':
+    resolution: {integrity: sha512-FJ0Ql5UTGVtK0ak4vLTxmhFHadb8NmTk4yOWoggh7UvC2pVQNyJK7L9nIZeIZ0IaVJtKfmKXtBWA0nKqqzQ/FQ==}
+    engines: {node: '>=20.19.0 <21.0.0 || >=22.0.0'}
+    hasBin: true
+    peerDependencies:
+      '@react-native-vector-icons/get-image': ^13.0.0
+      '@react-native/assets-registry': '*'
+      react: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      '@react-native-vector-icons/get-image':
+        optional: true
+      '@react-native/assets-registry':
         optional: true
 
   '@react-native-vector-icons/material-design-icons@12.5.0':
@@ -3598,6 +3616,16 @@ snapshots:
       plist: 3.1.0
       react: 19.2.4
       react-native: 0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.4)
+
+  '@react-native-vector-icons/common@13.0.0(@react-native/assets-registry@0.83.4)(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      find-up: 7.0.0
+      picocolors: 1.1.1
+      plist: 3.1.0
+      react: 19.2.4
+      react-native: 0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.4)
+    optionalDependencies:
+      '@react-native/assets-registry': 0.83.4
 
   '@react-native-vector-icons/material-design-icons@12.5.0(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)':
     dependencies:

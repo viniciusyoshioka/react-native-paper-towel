@@ -49,6 +49,7 @@
         "react-native-paper": "*"
     },
     "devDependencies": {
+        "@react-native-vector-icons/common": "^13.0.0",
         "@react-native-vector-icons/material-design-icons": "^12.5.0",
         "@stylistic/eslint-plugin": "^5.10.0",
         "@types/react": "^19.2.14",
