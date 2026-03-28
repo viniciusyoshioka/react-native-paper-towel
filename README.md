@@ -18,6 +18,12 @@ To install the library, run:
 npm install react-native-paper-towel
 ```
 
+or 
+
+```sh
+pnpm add react-native-paper-towel
+```
+
 or
 
 ```sh
