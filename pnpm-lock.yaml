@@ -13,43 +13,43 @@ importers:
         version: 19.2.4
     devDependencies:
       '@react-native-vector-icons/material-design-icons':
-        specifier: ^12.4.0
+        specifier: ^12.5.0
         version: 12.5.0(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)
       '@stylistic/eslint-plugin':
-        specifier: ^5.6.1
+        specifier: ^5.10.0
         version: 5.10.0(eslint@9.39.4)
       '@types/react':
-        specifier: ^19.2.7
+        specifier: ^19.2.14
         version: 19.2.14
       '@types/react-native-vector-icons':
         specifier: ^6.4.18
         version: 6.4.18
       '@vinicius1313/eslint-config':
-        specifier: ^2.2.0
+        specifier: ^2.2.2
         version: 2.2.2(@stylistic/eslint-plugin@5.10.0(eslint@9.39.4))(eslint@9.39.4)(typescript-eslint@8.57.2(eslint@9.39.4)(typescript@5.9.3))(typescript@5.9.3)
       '@vinicius1313/tsconfig':
         specifier: ^2.0.0
         version: 2.0.0
       eslint:
-        specifier: ^9.39.2
+        specifier: ^9.39.4
         version: 9.39.4
       react-material-design-provider:
         specifier: ^1.2.0
         version: 1.2.0(react@19.2.4)
       react-native:
-        specifier: ^0.83.1
+        specifier: ^0.83.4
         version: 0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.4)
       react-native-builder-bob:
-        specifier: ^0.40.17
+        specifier: ^0.40.18
         version: 0.40.18
       react-native-paper:
-        specifier: ^5.14.5
+        specifier: ^5.15.0
         version: 5.15.0(react-native-safe-area-context@5.7.0(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.4))(react@19.2.4))(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.4))(react@19.2.4)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
       typescript-eslint:
-        specifier: ^8.50.1
+        specifier: ^8.57.2
         version: 8.57.2(eslint@9.39.4)(typescript@5.9.3)
 
 packages:
