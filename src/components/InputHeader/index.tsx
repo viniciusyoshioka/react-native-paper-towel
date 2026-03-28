@@ -28,7 +28,7 @@ export const InputHeader = forwardRef<TextInput, InputHeaderProps>((props, ref) 
   return (
     <TextInput
       ref={ref}
-      blurOnSubmit={false}
+      submitBehavior={'submit'}
       placeholderTextColor={colors.onSurfaceVariant}
       selectionColor={colors.primaryContainer}
       cursorColor={colors.primary}
