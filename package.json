@@ -49,19 +49,20 @@
         "react-native-paper": "*"
     },
     "devDependencies": {
+        "@eslint/js": "^10.0.1",
         "@react-native-vector-icons/common": "^13.0.0",
-        "@react-native-vector-icons/material-design-icons": "^12.5.0",
+        "@react-native-vector-icons/material-design-icons": "^13.0.0",
         "@stylistic/eslint-plugin": "^5.10.0",
         "@types/react": "^19.2.14",
         "@types/react-native-vector-icons": "^6.4.18",
-        "@vinicius1313/eslint-config": "^2.2.2",
-        "@vinicius1313/tsconfig": "^2.0.0",
-        "eslint": "^9.39.4",
+        "@vinicius1313/eslint-config": "^2.3.0",
+        "@vinicius1313/tsconfig": "^3.0.1",
+        "eslint": "^10.1.0",
         "react-material-design-provider": "^1.2.0",
-        "react-native": "^0.83.4",
+        "react-native": "^0.84.1",
         "react-native-builder-bob": "^0.40.18",
         "react-native-paper": "^5.15.0",
-        "typescript": "^5.9.3",
+        "typescript": "^6.0.2",
         "typescript-eslint": "^8.57.2"
     },
     "react-native-builder-bob": {
