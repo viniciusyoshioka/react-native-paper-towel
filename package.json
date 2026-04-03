@@ -56,14 +56,14 @@
         "@types/react": "^19.2.14",
         "@types/react-native-vector-icons": "^6.4.18",
         "@vinicius1313/eslint-config": "^2.3.0",
-        "@vinicius1313/tsconfig": "^3.0.1",
+        "@vinicius1313/tsconfig": "^3.0.2",
         "eslint": "^10.1.0",
-        "react-material-design-provider": "^1.2.0",
+        "react-material-design-provider": "^1.3.0",
         "react-native": "^0.84.1",
-        "react-native-builder-bob": "^0.40.18",
+        "react-native-builder-bob": "^0.41.0",
         "react-native-paper": "^5.15.0",
         "typescript": "^6.0.2",
-        "typescript-eslint": "^8.57.2"
+        "typescript-eslint": "^8.58.0"
     },
     "react-native-builder-bob": {
         "source": "src",
