@@ -1,2 +1,4 @@
 overrides:
+  '@babel/plugin-transform-modules-systemjs@>=7.12.0 <=7.29.3': '>=7.29.4'
   '@xmldom/xmldom@<0.8.12': '>=0.8.12'
+  '@xmldom/xmldom@>=0.9.0 <0.9.10': '>=0.9.10'
